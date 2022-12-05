@@ -29,9 +29,9 @@ showHide.forEach(eyeIcon => {
     })
 })
 
-signUp.addEventListener('click',()=>{
+signUp.addEventListener('click', () => {
     container.classList.add("active")
 })
-login.addEventListener('click',()=>{
+login.addEventListener('click', () => {
     container.classList.remove("active")
 })

@@ -6,33 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Sign up</title>
-    <link rel="stylesheet" href="../Login and sign up form/sign.css">
+    <link rel="stylesheet" href="./style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
-    <h3>bharat bhai kya bana rahe ho</h3>
+
+
     <div class="container">
 
-        <div class="forms">
-            <div class="form login">
-                <span class="title">Login</span>
+        <div class="overlay" style="display: none;">
 
 
-                <form action="#">
-                    <input type="reset" id="resT" class="reseT">
 
+        </div>
+
+        <div class="form">
+            <div class="login">
+                <form class="login-form">
+                    <h1 class="title">Login</h1>
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
-                        <i class='bx bx-envelope icon'></i>
+                        <input type="text" placeholder="Enter Email" id="Email" required>
+                        <i class='bx bx-envelope'></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
-                        <i class='bx bx-lock-alt icon'></i>
-                        <i class='bx  bx-low-vision showHide'></i>
+                        <input type="text" placeholder="Enter Email" id="Email" required>
+                        <i class='bx bx-lock-alt'></i>
                     </div>
-
                     <div class="checkbox-text">
                         <div class="checkbox-content">
                             <input type="checkbox" id="logCheck">
@@ -40,75 +41,24 @@
                         </div>
                         <a href="#" class="text">Forgot password?</a>
                     </div>
-                    <div class="input-field button">
-                        <input type="button" value="Login Now">
-                    </div>
-
+                    <input type="submit" class="btn" value="Login" onsubmit=" return submitForm()">
                 </form>
-
-                <div class="login-signup">
-                    <span class="text">
-                        Not a member?
-                        <a href="#" class="text signup-link">Sign up now</a>
-                    </span>
-                </div>
-
-
             </div>
 
-            <!-- -------------registration form------------------->
 
-            <div class="form signup">
-                <span class="title">Registration</span>
-
-
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
-                        <i class='bx bx-user'></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
-                        <i class='bx bx-envelope icon'></i>
-                    </div>
-
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="create your password" required>
-                        <i class='bx bx-lock-alt icon'></i>
-                        <i class='bx bx-low-vision showHide'></i>
-                    </div>
-                    <div class="input-field">
-
-                        <input type="password" class="password" placeholder="Confirm password" required>
-                        <i class='bx bx-lock-alt icon'></i>
-
-                    </div>
-
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
-                            <label for="logCheck" class="text">Remember me</label>
-                        </div>
-                        <a href="#" class="text">Forgot password?</a>
-                    </div>
-                    <div class="input-field button">
-                        <input type="button" value="Sign up">
-                    </div>
-
-                </form>
-
-                <div class="login-signup">
-                    <span class="text">
-                        Not a member?
-                        <a href="#" class="text login-link">Sign in</a>
-                    </span>
-                </div>
-
+            <div class="sign-up">
 
             </div>
         </div>
+
     </div>
-    <script src="./sign.js"></script>
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
