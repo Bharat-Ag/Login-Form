@@ -293,11 +293,84 @@ hr {
 
 /* --------------------------------------------------------------media queries*/
 
-@media (min-width:380px) and (max-width:509px) {
-    body {
-        background-color: rgb(255, 106, 47);
+@media only screen and (max-width:379px) {
+    span a {
+        font-size: 13px;
+        position: absolute;
+        bottom: 50px;
+        right: 0;
     }
 
+    .form {
+        transform: translate(00%);
+        flex-direction: column;
+        margin: auto 0;
+        transition-delay: 200ms;
+    }
+
+    .form .item {
+        width: 100%;
+    }
+
+
+    .form.active {
+        transform: translateY(-50%);
+    }
+
+    .container {
+        max-width: 610px;
+    }
+
+    .container .bg {
+        pointer-events: none;
+    }
+
+    .container .bg img {
+        display: none;
+    }
+
+    .container .bg .bg-circle {
+        transform: translate(-27%, -117%) scale(1)
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(-72%, 77%) scale(1);
+        left: 100%;
+    }
+
+    .input-field {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .checkbox-text {
+        font-size: 12px;
+    }
+
+    .lgbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 13px auto;
+        gap: 43px;
+    }
+
+    .lgbtn input,
+    .lgbtn button {
+        padding: 12px 0;
+    }
+
+    .other {
+        margin-top: 10px;
+    }
+
+    .other button {
+        font-size: 16px;
+        gap: 20px;
+    }
+}
+
+@media (min-width:380px) and (max-width:509px) {
     .form {
         transform: translate(00%);
         flex-direction: column;
@@ -369,10 +442,6 @@ hr {
 }
 
 @media (min-width:510px) and (max-width:683px) {
-    body {
-        background-color: greenyellow;
-    }
-
     .form {
         gap: 10px;
         transform: translate(00%);
@@ -415,10 +484,6 @@ hr {
 }
 
 @media (min-width:684px) and (max-width:767px) {
-    body {
-        background-color: rgb(0, 255, 255);
-    }
-
     .form {
         gap: 17px;
     }
@@ -459,10 +524,6 @@ hr {
 
 
 @media (min-width:768px) and (max-width:850px) {
-    body {
-        background-color: red;
-    }
-
     .container {
         padding: 20px;
     }
@@ -490,10 +551,6 @@ hr {
 
 
 @media (min-width:851px) and (max-width:950px) {
-    body {
-        background: white;
-    }
-
     .form.active {
         transform: translateX(-55%);
     }
