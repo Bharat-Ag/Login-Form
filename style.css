@@ -18,6 +18,7 @@ body {
     align-items: center;
     background: var(--main-color);
     min-height: 100vh;
+    padding: 20px;
 }
 
 button,
@@ -33,13 +34,14 @@ input {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.202);
     border-radius: 10px;
     padding: 20px 30px;
     position: relative;
+    height: 490px;
 }
 
 .container .bg {
@@ -52,7 +54,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(255, 255, 255);
+    background: none;
     transition: left .5s;
     margin: 0 auto;
 }
@@ -64,7 +66,7 @@ input {
     z-index: 10;
     border-radius: 50%;
     position: absolute;
-    transform: translate(-130%, -50%) scale(2);
+    transform: translate(-130%, -60%) scale(2);
     left: 0;
     transition: transform .7s cubic-bezier(0, .54, 1, .46), left .7s cubic-bezier(0, .54, 1, .46);
 }
@@ -80,7 +82,7 @@ input {
 
 .container .bg.active .bg-circle {
 
-    transform: translate(32%, 48%) scale(2);
+    transform: translate(35%, 53%) scale(2);
     left: 100%;
 }
 
@@ -101,7 +103,7 @@ input {
 
 
 .form.active {
-    transform: translateX(-52.5%);
+    transform: translateX(-53.5%);
 }
 
 .form .login {
@@ -285,4 +287,222 @@ hr {
     padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+
+/* --------------------------------------------------------------media queries*/
+
+@media (min-width:380px) and (max-width:509px) {
+    body {
+        background-color: rgb(255, 106, 47);
+    }
+
+    .form {
+        transform: translate(00%);
+        flex-direction: column;
+        margin: auto 0;
+        transition-delay: 200ms;
+    }
+
+    .form .item {
+        width: 100%;
+    }
+
+
+    .form.active {
+        transform: translateY(-50%);
+    }
+
+    .container {
+        max-width: 610px;
+    }
+
+    .container .bg {
+        pointer-events: none;
+    }
+
+    .container .bg img {
+        display: none;
+    }
+
+    .container .bg .bg-circle {
+        transform: translate(-27%, -117%) scale(1)
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(-72%, 77%) scale(1);
+        left: 100%;
+    }
+
+    .input-field {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .checkbox-text {
+        font-size: 12px;
+    }
+
+    .lgbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 13px auto;
+        gap: 43px;
+    }
+
+    .lgbtn input,
+    .lgbtn button {
+        padding: 12px 0;
+    }
+
+    .other {
+        margin-top: 10px;
+    }
+
+    .other button {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+}
+
+@media (min-width:510px) and (max-width:683px) {
+    body {
+        background-color: greenyellow;
+    }
+
+    .form {
+        gap: 10px;
+        transform: translate(00%);
+        flex-direction: column;
+        margin: auto 0;
+        transition-delay: 200ms;
+
+    }
+
+    .form .item {
+        width: 100%;
+    }
+
+
+    .form.active {
+        transform: translateY(-50%);
+    }
+
+    .container {
+        max-width: 610px;
+    }
+
+    .container .bg {
+        pointer-events: none;
+    }
+
+    .container .bg img {
+        display: none;
+    }
+
+    .container .bg .bg-circle {
+        transform: translate(-27%, -117%) scale(1)
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(-72%, 77%) scale(1);
+        left: 100%;
+    }
+
+}
+
+@media (min-width:684px) and (max-width:767px) {
+    body {
+        background-color: rgb(0, 255, 255);
+    }
+
+    .form {
+        gap: 17px;
+    }
+
+    .form.active {
+        transform: translateX(-55%);
+    }
+
+    .container .bg .bg-circle {
+        width: 700px;
+        height: 700px;
+    }
+
+    .container .bg .bg-circle {
+        transform: translate(-86%, -106%) scale(2);
+
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(-19%, 110%) scale(2);
+        left: 100%;
+    }
+
+    .container .bg img {
+        width: 345px;
+        margin: 20px auto;
+    }
+
+    .other button {
+        font-size: 17px;
+    }
+
+    .other .google img {
+        width: 21px;
+    }
+
+}
+
+
+@media (min-width:768px) and (max-width:850px) {
+    body {
+        background-color: red;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container .bg .bg-circle {
+        width: 800px;
+        height: 800px;
+    }
+
+    .container .bg img {
+        width: 350px;
+        margin: 20px auto;
+    }
+
+    .container .bg.active {
+        left: 47%;
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(39%, 53%) scale(2);
+        left: 100%;
+    }
+}
+
+
+
+@media (min-width:851px) and (max-width:950px) {
+    body {
+        background: white;
+    }
+
+    .form.active {
+        transform: translateX(-55%);
+    }
+
+    .container .bg.active {
+        left: 47%;
+    }
+
+    .container .bg.active .bg-circle {
+        transform: translate(43%, 40%) scale(2);
+    }
 }
