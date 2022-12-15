@@ -26,6 +26,8 @@ input {
     border: none;
 }
 
+/* --------------------------------------------------------------main container*/
+
 .container {
     display: flex;
     justify-content: center;
@@ -52,6 +54,7 @@ input {
     align-items: center;
     background: rgb(255, 255, 255);
     transition: left .5s;
+    margin: 0 auto;
 }
 
 .container .bg .bg-circle {
@@ -81,6 +84,8 @@ input {
     left: 100%;
 }
 
+/* --------------------------------------------------------------form box*/
+
 .form {
     width: 100%;
     display: flex;
@@ -89,11 +94,34 @@ input {
     gap: 50px;
     transform: translateX(50%);
     z-index: 8;
-    transition: transform .5s cubic-bezier(0, .54, .5, .99);
+    transition: transform .7s cubic-bezier(0, .54, .5, .99);
+    transition-delay: 100ms;
+
 }
 
+
 .form.active {
-    transform: translateX(-54%);
+    transform: translateX(-52.5%);
+}
+
+.form .login {
+    opacity: 1;
+    transition: opacity .4s;
+    transition-delay: 100ms;
+}
+
+.form.active .login {
+    opacity: 0;
+}
+
+.sign-up {
+    opacity: 0;
+    transition: opacity .4s;
+    transition-delay: 200ms;
+}
+
+.form.active .sign-up {
+    opacity: 1;
 }
 
 .item {
@@ -158,7 +186,14 @@ span a {
     align-items: center;
     gap: 20px;
     user-select: none;
+    cursor: pointer;
 }
+
+.checkbox-content label {
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------form btn*/
 
 .lgbtn {
     display: flex;
@@ -185,6 +220,9 @@ span a {
     background-color: rgb(255, 116, 209);
 
 }
+
+/* --------------------------------------------------------------login with other section*/
+
 
 hr {
     background-color: rgba(0, 0, 0, 0.2);
