@@ -13,27 +13,35 @@
 
 <body>
 
-
     <div class="container">
 
-        <div class="overlay" style="display: none;">
-
-
-
+        <div class="bg">
+            <span class="bg-circle"></span>
+            <img src="./12085707_20944201_prev_ui.png" alt="">
         </div>
 
         <div class="form">
-            <div class="login">
+
+            <div class="login item">
                 <form class="login-form">
-                    <h1 class="title">Login</h1>
+                    <span>
+                        <h1 class="title">Login</h1>
+                        <a href="https://bharat-ag.github.io/Porfotlio/" target="_blank">Visit my site</a>
+                    </span>
+
+                    <!-- ------------------------------------------------------------ -->
                     <div class="input-field">
-                        <input type="text" placeholder="Enter Email" id="Email" required>
                         <i class='bx bx-envelope'></i>
+                        <input type="text" placeholder="Enter Email" id="email" required>
                     </div>
+                    <!-- ------------------------------------------------------------ -->
+
                     <div class="input-field">
-                        <input type="text" placeholder="Enter Email" id="Email" required>
-                        <i class='bx bx-lock-alt'></i>
+                        <i class='bx bx-lock-alt showHide'></i>
+                        <input type="password" placeholder="Enter password" id="password" required>
                     </div>
+                    <!-- ------------------------------------------------------------ -->
+
                     <div class="checkbox-text">
                         <div class="checkbox-content">
                             <input type="checkbox" id="logCheck">
@@ -41,24 +49,88 @@
                         </div>
                         <a href="#" class="text">Forgot password?</a>
                     </div>
-                    <input type="submit" class="btn" value="Login" onsubmit=" return submitForm()">
+                    <!-- ------------------------------------------------------------ -->
                 </form>
+                <div class="lgbtn">
+                    <input type="submit" class="btn" value="Login">
+                    <button class="sign-up-btn" onclick="signUpBtn()">Sign up</button>
+                </div>
+                <!-- ------------------------------------------------------------ -->
+
+                <hr>
+                <!-- ------------------------------------------------------------ -->
+                <div class="other">
+                    <button class="facebook">
+                        <i class="bx bxl-facebook-square"></i>
+                        Login with Facebook
+                    </button>
+                    <button class="google">
+                        <img src="./google-logo-9824.png" alt="">
+                        Login with Google
+                    </button>
+                </div>
+
+
             </div>
 
 
-            <div class="sign-up">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="sign-up item">
+                <form class="sign-up-form">
+                    <span>
+                        <h1 class="title">Sign up</h1>
+                        <a href="https://bharat-ag.github.io/Porfotlio/" target="_blank">Visit my site</a>
+                    </span>
+                    <div class="input-field">
+                        <i class='bx bx-user'></i>
+                        <input type="text" placeholder="Enter username" id="username">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bx-phone'></i>
+                        <input type="text" placeholder="Phone number" id="phone">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bx-envelope'></i>
+                        <input type="text" placeholder="Enter Email" id="email">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bx-lock-alt showHide'></i>
+                        <input type="password" placeholder="Enter password" id="password">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bx-lock-alt conformPassEye'></i>
+                        <input type="password" placeholder="Confirm password" id="Cpassword">
+                    </div>
+
+
+                    <input type="submit" class="btn" value="Sign up">
+                </form>
+                <div class="orLogin" onclick="loginAgainBtn()">
+                    <h3>Or login</h3>
+                </div>
 
             </div>
+
         </div>
-
     </div>
 
-
-
-
-
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

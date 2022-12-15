@@ -1,37 +1,55 @@
-let container = document.querySelector(".container"),
-    showHide = document.querySelectorAll(".showHide"),
-    pwField = document.querySelectorAll(".password"),
-    signUp = document.querySelector(".signup-link"),
-    login = document.querySelector(".login-link");
 
 
+let signupBTn = document.querySelector(".sign-up-btn");
+let formDiv = document.querySelector(".form");
+let bg = document.querySelector(".bg");
 
-showHide.forEach(eyeIcon => {
-    eyeIcon.addEventListener('click', () => {
-        pwField.forEach(pwField => {
-            if (pwField.type === "password") {
-                pwField.type = "text";
+function signUpBtn() {
 
+    formDiv.classList.add("active");
+    bg.classList.add("active");
 
+}
 
-                showHide.forEach(icon => {
-                    icon.classList.replace("bx-low-vision", "bx-show");
-                })
-            } else {
-                pwField.type = "password";
+let loginAgainBtn = () => {
+    formDiv.classList.remove("active");
+    bg.classList.remove("active");
+}
 
-                showHide.forEach(icon => {
-                    icon.classList.replace("bx-show", "bx-low-vision");
-                })
+// -------------------------------------------------------------show hide password funtion
+
+let pwField = document.querySelectorAll("#password")
+
+let passEye = document.querySelectorAll(".showHide")
+
+passEye.forEach(icon => {
+    icon.addEventListener("click", () => {
+        pwField.forEach(pwfield => {
+            if (pwfield.type === "password") {
+
+                pwfield.setAttribute("type", "text")
+            }
+            else {
+                pwfield.setAttribute("type", "password")
 
             }
         })
     })
 })
 
-signUp.addEventListener('click', () => {
-    container.classList.add("active")
-})
-login.addEventListener('click', () => {
-    container.classList.remove("active")
+
+//----------------------------------------show/hide for confirm pass field
+
+let confirmPass = document.querySelector("#Cpassword");
+
+let cEye = document.querySelector(".conformPassEye")
+
+cEye.addEventListener("click", () => {
+    if (confirmPass.type === "password") {
+        confirmPass.setAttribute("type", "text");
+    }
+    else {
+        confirmPass.setAttribute("type", "password");
+    }
+
 })
